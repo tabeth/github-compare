@@ -1,5 +1,5 @@
 {
-  "name": "github-compare",
+  "name": "github-web-compare",
   "version": "1.0.0",
   "description": "A command line tool to quickly display diffs by hooking onto GitHub's Compare View.",
   "main": "index.js",
@@ -27,6 +27,9 @@
   "homepage": "https://github.com/tabeth/github-compare#readme",
   "dependencies": {
     "commander": "^2.9.0",
-    "open": "0.0.5"
+    "fs": "0.0.2",
+    "github-repo-from-config": "^1.0.2",
+    "open": "0.0.5",
+    "resolve-git-branch": "^0.1.1"
   }
 }
