@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-console.log('GitHub Compare acts similarly to `git diff`, but uses GitHub Compare')
+console.log('GitHub Compare acts similarly to `git diff`, but uses GitHub Compare');
 
 var program = require('commander');
+var fs      = require('fs');
 var open    = require('open');
-var config  = fs.readFileSync('.git/config');
 var parse   = require('github-repo-from-config');
+var config  = fs.readFileSync('.git/config');
 
 program
 .arguments('<blobOne> <blobTwo>')
@@ -14,7 +15,11 @@ program
 .option('-r, --repo <repo>', 'The repo you with the branches you want to compare.')
 .action(function() {
   // Open GitHub
-  var organization = program.organization + '/' || '';
+  var organization = '';
+  if (program.organization){
+    organization = program.organization + '/'
+  }
+
   var repo         = program.repo || parse(config).path;
   var one          = program.args[0];
   var two          = program.args[1];
