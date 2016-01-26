@@ -1,0 +1,32 @@
+{
+  "name": "github-compare",
+  "version": "1.0.0",
+  "description": "A command line tool to quickly display diffs by hooking onto GitHub's Compare View.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabeth/github-compare.git"
+  },
+  "keywords": [
+    "git",
+    "diff",
+    "github",
+    "compare"
+  ],
+  "bin": {
+    "snippet": "./index.js"
+  },
+  "author": "Tabeth Nkangoh <tabeth@tabeth.com> (http://tabeth.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tabeth/github-compare/issues"
+  },
+  "homepage": "https://github.com/tabeth/github-compare#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "open": "0.0.5"
+  }
+}
